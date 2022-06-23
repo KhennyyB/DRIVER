@@ -10,7 +10,7 @@
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;*/
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 1;
@@ -90,6 +90,9 @@ nav .fa{
     .text-box h1{
         font-size: 20px;
     }
+    .text-box p{
+        font-size: 15px;
+}
     .nav-links ul li{
         display: block;
     }

@@ -82,7 +82,7 @@ p{
     color: white;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 500px){
     .text-box{
         top: 30%;
         left: 50%;

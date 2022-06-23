@@ -15,6 +15,9 @@
     left: 0;
     z-index: 1;
 }
+body{
+    background:  rgba(4,9,30,0.7) url(assets//backgroundimage.png);
+}
 nav{
     display: flex;
     padding: 2% 6%;

@@ -68,7 +68,7 @@ p{
     width: 90%;
     color: white;
     position: absolute;
-    top: 30%;
+    top: 28%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: left;
@@ -82,7 +82,7 @@ p{
     color: white;
 }
 
-@media(max-width: 700px){
+@media(max-width: 1024px){
     .text-box{
         top: 30%;
         left: 50%;
@@ -93,7 +93,7 @@ p{
         font-size: 30px;
     }
     .text-box p{
-        font-size: 10px;
+        font-size: 15px;
 }
     .nav-links ul li{
         display: block;

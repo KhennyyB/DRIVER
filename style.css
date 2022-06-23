@@ -59,13 +59,13 @@ nav .fa{
     width: 90%;
     color: white;
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: left;
 }
 .text-box h1{
-    font-size: 62px;
+    font-size: 52px;
 }
 .text-box p{
     margin: 10px 0 40px;

@@ -72,7 +72,7 @@ nav .fa{
     width: 90%;
     color: white;
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
@@ -88,7 +88,7 @@ nav .fa{
 
 @media(max-width: 700px){
     .text-box{
-        top: 40%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
         text-align: left;
@@ -97,7 +97,7 @@ nav .fa{
         font-size: 20px;
     }
     .text-box p{
-        font-size: 15px;
+        font-size: 10px;
 }
     .nav-links ul li{
         display: block;

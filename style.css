@@ -72,10 +72,10 @@ nav .fa{
     width: 90%;
     color: white;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
-    text-align: center;
+    text-align: left;
 }
 .text-box h1{
     font-size: 50px;
@@ -88,7 +88,7 @@ nav .fa{
 
 @media(max-width: 700px){
     .text-box{
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%,-50%);
         text-align: left;

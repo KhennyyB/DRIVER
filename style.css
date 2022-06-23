@@ -65,13 +65,13 @@ nav .fa{
     width: 90%;
     color: white;
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: left;
 }
 .text-box h1{
-    font-size: 60px;
+    font-size: 62px;
 }
 .text-box p{
     margin: 10px 0 40px;
@@ -87,10 +87,10 @@ nav .fa{
         text-align: left;
 }
     .text-box h1{
-        font-size: 25px;
+        font-size: 30px;
     }
     .text-box p{
-        font-size: 15px;
+        font-size: 10px;
 }
     .nav-links ul li{
         display: block;

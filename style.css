@@ -4,7 +4,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 .header{
-    min-height: 100vh;
+    height: 100%;
     width: 100%;
     background:  rgba(4,9,30,0.7) url(assets//backgroundimage.png);
     background-size: cover;

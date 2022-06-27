@@ -111,6 +111,11 @@ p{
     display: grid;
     text-align: right;
 }
+.icons a{
+    font-size: 26px;
+    margin: 0 10px 0 0;
+    text-decoration: none;
+}
 /*
 @media only screen and (max-width: 700px){
     .text-box{

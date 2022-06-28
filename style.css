@@ -88,6 +88,7 @@ p{
 .countdown {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     text-align: center;
 }
 .day,.hour,.minute,.second {

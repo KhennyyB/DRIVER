@@ -4,10 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driver</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" size="32x32" href="./assets/driver-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.1.1/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/76d68577fe.js" crossorigin="anonymous"></script>
 </head>
 
@@ -16,7 +17,7 @@
 <section class="header">
     <nav>
         <a href="index.html"><img src="assets//driverlogo1.png"></a>
-         <div class="nav-links" id="navLinks">
+        <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="">HOME</a></li>
@@ -30,46 +31,47 @@
     <h1><strong>Something <span style="color: #FD7F00;">ultra</span> is coming<br>Be the first to know</strong></h1>
     <p>We are creating the ideal driver education<br>experience, connecting aspiring African<br>drivers and certified instructors<br>everywhere.</p>
 </div>
-
-<!------Countdown Timer------>
-
-<section class="countdown-timer">
-    <div>
-       <div class="countdown">
-          <div class="countdown-day">
-             <h3 class="day">Time</h3>
-             <h3>Day</h3>
-          </div>
-          <div class="countdown-hours">
-             <h3 class="hour">Time</h3>
-             <h3>Hour</h3>
-          </div>
-          <div class="countdown-minutes">
-             <h3 class="minute">Time</h3>
-             <h3>Minute</h3>
-           </div>
-           <div class="countdown-seconds">
-             <h3 class="second">Time</h3>
-             <h3>Second</h3>
-           </div>
-        </div>
-     </div>
 </section>
 
-<!----- Footer ----->
+<!------ Countdown Timer ------>
+<section class="countdown-timer">
+    <div>
+        <div class="countdown-day">
+            <div class="countdown-day">
+                <h3 class="day">Time</h3>
+                <h3>Day</h3>
+            </div>
+            <div class="countdown-hour">
+                <h3 class="hour">Time</h3>
+                <h3>Hour</h3>
+            </div>
+            <div class="countdown-minutes">
+                <h3 class="minute">Time</h3>
+                <h3>Minutes</h3>
+            </div>
+            <div class="countdown-seconds">
+                <h3 class="second">Time</h3>
+                <h3>Seconds</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!------ Footer ------>
 
 <section class="footer">
     <div class="icons">
-        <a href="#" class="fa-brands fa-facebook" style="color:#3b5998;" aria-hidden="true" alt="Facebook"></a>
-        <a href="#" class="fa-brands fa-twitter" style="color:#00aced;" aria-hidden="true" alt="Twitter"></a>
-        <a href="#" class="fa-brands fa-instagram" style="color:#3f729b;" aria-hidden="true" alt="Instagram"></a>
-        <a href="#" class="fa-brands fa-linkedin" style="color:#0072b1;" aria-hidden="true" alt="LinkedIn"></a>
+        <a href="#" class="fab fa-instagram" style="color:#f56040;" aria-hidden="true" alt="Instagram"></a>
+        <a href="#" class="fab fa-linkedin" style="color:#0072b1;" aria-hidden="true" alt="LinkedIn"></a>
+        <a href="#" class="fab fa-facebook" style="color:#3b5998;" aria-hidden="true" alt="Facebook"></a>
+        <a href="#" class="fab fa-twitter" style="color:#00aced;" aria-hidden="true" alt="Twitter"></a>  
     </div>
     <p>Copyright © Driver 2022. All rights reserved.</p>
 </section>
 
 
-<!------Javascript for Toggle Menu------>
+<!------ Javascript for Toggle Menu ------>
 <script>
 
     var navLinks = document.getElementById("navLinks");
@@ -83,8 +85,9 @@
 </script>
 
 
-<!------Javascript for Countdown Timer------>
-<script scr="./app.js"></script>
+<!------ Javascript for Countdown Timer ------>
+<script src="app.js"></script>
+
 
 </body>
 </html>

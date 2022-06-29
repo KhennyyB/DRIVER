@@ -201,7 +201,7 @@ p{
         display: block;
     }
     .nav-links{
-        position: relative;
+        position: absolute;
         background: #FD7F00;
         height: 100vh;
         width: 200px;

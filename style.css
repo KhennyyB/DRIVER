@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 .header{
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
     position: relative;
     top: 0;
@@ -25,8 +25,8 @@ nav{
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
-    /*align-content: center;
-    text-align: center;*/
+    align-content: center;
+    text-align: center;
     align-items: center;
 }
 nav img{
@@ -66,29 +66,34 @@ nav .fa{
 p{
     opacity: 0.7;
 }
-
+h3{
+    opacity: 0.9;
+}
 /* contents */ 
 .text-box{
-    width: 66%;
+    width: 68%;
     color: white;
     position: absolute;
-    top: 35%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: left;
 }
 .text-box h1{
-    font-size: 2.8rem;
+    font-size: 3.4rem;
     font-weight: 900;
 }
 .text-box p{
     margin-top: 1rem;
-    font-size: 1.3em;
+    font-size: 1.6rem;
     color: white;
 }
 .countdown-timer{
-    width: 81%;
-    position: relative;
+    width: 75%;
+    top: 63%;
+    position: absolute;
+    padding: 10px;
+    transform: translate(0, -50%);
     display: flex;
     color: white;
     flex-direction: column;
@@ -106,11 +111,82 @@ p{
     height: 100px;
     margin: 1.5rem;
     font-size: 3rem;
+    opacity: 0.5;
     color: white;
     background: #5E079B;
     border: 2px solid white;
     border-radius: 50%;
     padding: 20px;
+}
+h2{
+    color: white;
+    position: absolute;
+    top: 81%;
+    width: 44%;
+    text-align: center;
+}
+input{
+    border: none;
+    position: absolute;
+    padding: 0px 0px 20px 0px;
+    width: 38%;
+    top: 88%;
+    left: 16.5%;
+    border-bottom: 2px solid #FD7F00;
+    border-radius: none;
+    outline: none;
+    background: none;
+    color: white;
+}
+button{
+    background-color: #FD7F00;
+    position: absolute;
+    width: 12%;
+    top: 86.5%;
+    left: 60%;
+    color: black;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 1s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: black;
+    color: #5E079B;
+}
+#confirm{
+    display: none;
+    background-color: #c0c0c0;
+    color: #000000;
+    border: 1px solid #aaa;
+    position: fixed;
+    padding: 50px;
+    width: 350px;
+    height: 200px;
+    top: 40%;
+    left: 32%;
+    border-radius: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+#confirm button{
+    background-color: #5E079B;
+    border-radius: 10px;
+    border: 0.7px solid #FD7F00;
+    padding: 9px;
+    text-align: center;
+    width: 30%;
+    transition: all 1s;
+    cursor: pointer;
+}
+#confirm button:hover{
+    background-color: #000000;
+    color: #5E079B;
+}
+#confirm .message{
+    text-align: center;
 }
 
 /* footer */
@@ -121,10 +197,10 @@ p{
     opacity: 0.5;
 }
 .footer{
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
     font-weight: lighter;
     color: white;
-    bottom: 2rem;
+    bottom: 4rem;
     position: relative;
 }
 .icons .fa{
@@ -133,7 +209,7 @@ p{
     padding: 1em 0;    
 }
 .icons{
-    padding: 80px;
+    padding: 6rem 3rem;
     float: none;
     display: grid;
     text-align: right;
@@ -145,7 +221,7 @@ p{
     color: white;
 }
 
-/* tablet devices */
+/* tablet devices 
 @media screen and (max-width: 768px){
     nav{
         display: flex;
@@ -162,7 +238,7 @@ p{
         width: 88%;
         color: white;
         position: absolute;
-        top: 30%;
+        top: 20%;
         left: 50%;
         transform: translate(-50%,-50%);
         text-align: left;
@@ -184,7 +260,7 @@ p{
     }
 }
 
-/* phone devices */
+/* phone devices 
 @media screen and (max-width: 425px){
     nav{
         display: flex;
@@ -239,21 +315,48 @@ p{
     }
     .text-box p{
         margin-top: 1rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
         color: white;
     }
     .icons{
         display: contents;
     }
+    .countdown-timer{
+        width: 77%;
+        top: 53%;
+        position: absolute;
+        padding: 10px;
+        transform: translate(0, -50%);
+        display: flex;
+        color: white;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .day,.hour,.minute,.second{
+        width: 60px;
+        height: 60px;
+        margin: 0.4rem;
+        font-size: 1.1rem;
+        color: white;
+        background: #5E079B;
+        border: 2px solid white;
+        border-radius: 50%;
+        padding: 17px;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
 }
 
-/* phone devices (landscape mode) */
+/* phone devices (landscape mode) 
 @media screen and (orientation:landscape) and (max-width: 1024px){
     .text-box{
         width: 88%;
         color: white;
         position: absolute;
-        top: 40%;
+        top: 38%;
         left: 50%;
         transform: translate(-50%,-50%);
         text-align: left;

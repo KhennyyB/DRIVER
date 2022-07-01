@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.1.1/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/76d68577fe.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <!----- navigation ----->
@@ -43,7 +44,7 @@
             </div>
             <div class="countdown-hour">
                 <h3 class="hour">Time</h3>
-                <h3>Hour</h3>
+                <h3>Hours</h3>
             </div>
             <div class="countdown-minutes">
                 <h3 class="minute">Time</h3>
@@ -55,6 +56,24 @@
             </div>
         </div>
     </div>
+</section>
+
+
+<!------ Get Updates ------>
+<section>
+    <div>
+        <h2>Get Updates</h2>
+    </div>
+    <form>
+        <div class="form-item">
+            <input type="email" placeholder="jane@example.com" id="email" required>
+            <button type="button" onclick="functionAlert()"; >Sign up</button>
+        </div>
+        <div id="confirm">
+            <div class="message"><strong><span style="color: #5e079b">Your email has been registered</span></strong><br><br>We will keep you notified</div><br>
+            <button class="yes">Okay</button>
+        </div>
+    </form>
 </section>
 
 
@@ -87,6 +106,21 @@
 
 <!------ Javascript for Countdown Timer ------>
 <script src="app.js"></script>
+
+
+<!------ Javacript for alert message ------>
+<script>
+    function functionAlert(msg, myYes) {
+        var confirmBox = $("#confirm");
+        confirmBox.find(".message").text(msg);
+        confirmBox.find(".yes").unbind().click(function() {
+            confirmBox.hide();
+        });
+        confirmBox.find(".yes").click(myYes);
+        confirmBox.show();
+    }
+</script>
+
 
 
 </body>

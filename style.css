@@ -4,9 +4,11 @@
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
+html{
+    font-size: 16px;
+}
 .header{
-    min-height: 50vh;
-    width: 100%;
+    min-height: 60vh;
     position: relative;
     top: 0;
     left: 0;
@@ -69,18 +71,19 @@ p{
 h3{
     opacity: 0.9;
 }
+
 /* contents */ 
 .text-box{
     width: 68%;
     color: white;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    position: relative;
+    bottom: 5px;
+    left: 16%;
+    
     text-align: left;
 }
 .text-box h1{
-    font-size: 3.4rem;
+    font-size: 3.3rem;
     font-weight: 900;
 }
 .text-box p{
@@ -89,11 +92,10 @@ h3{
     color: white;
 }
 .countdown-timer{
-    width: 75%;
-    top: 63%;
-    position: absolute;
+    bottom: 40px;
+    right: 160px;
+    position: relative;
     padding: 10px;
-    transform: translate(0, -50%);
     display: flex;
     color: white;
     flex-direction: column;
@@ -120,73 +122,18 @@ h3{
 }
 h2{
     color: white;
-    position: absolute;
-    top: 81%;
-    width: 44%;
+    position: relative;
+    right: 28%;
     text-align: center;
 }
-input{
-    border: none;
-    position: absolute;
-    padding: 0px 0px 20px 0px;
-    width: 38%;
-    top: 88%;
-    left: 16.5%;
-    border-bottom: 2px solid #FD7F00;
-    border-radius: none;
-    outline: none;
-    background: none;
-    color: white;
-}
-button{
-    background-color: #FD7F00;
-    position: absolute;
-    width: 12%;
-    top: 86.5%;
-    left: 60%;
-    color: black;
-    padding: 15px;
-    border-radius: 15px;
-    font-size: 1rem;
-    font-weight: 700;
-    transition: all 1s;
-    cursor: pointer;
-}
-button:hover{
-    background-color: black;
-    color: #5E079B;
-}
-#confirm{
-    display: none;
-    background-color: #c0c0c0;
-    color: #000000;
-    border: 1px solid #aaa;
-    position: fixed;
-    padding: 50px;
-    width: 350px;
-    height: 200px;
-    top: 40%;
-    left: 32%;
-    border-radius: 30px;
-    box-sizing: border-box;
-    text-align: center;
-}
-#confirm button{
-    background-color: #5E079B;
-    border-radius: 10px;
-    border: 0.7px solid #FD7F00;
-    padding: 9px;
-    text-align: center;
-    width: 30%;
-    transition: all 1s;
-    cursor: pointer;
-}
-#confirm button:hover{
-    background-color: #000000;
-    color: #5E079B;
-}
-#confirm .message{
-    text-align: center;
+.form-item{
+    display: flex;
+    position: relative;
+    top: 50%; 
+    justify-content: center;
+    align-items: center;
+    right: 22%;
+
 }
 
 /* footer */
@@ -200,7 +147,7 @@ button:hover{
     margin-bottom: 0rem;
     font-weight: lighter;
     color: white;
-    bottom: 4rem;
+    bottom: 2rem;
     position: relative;
 }
 .icons .fa{
@@ -221,7 +168,68 @@ button:hover{
     color: white;
 }
 
-/* tablet devices 
+@media screen and (max-width: 1024px) {
+    .text-box{
+        color: white;
+        position: relative;
+        top: 5px;
+        left: 17%;
+    }
+    .text-box h1{
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    .text-box p{
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        color: white;
+    }
+    .countdown-timer{
+        bottom: 120px;
+        right: 7%;
+        position: relative;
+        padding: 10px;
+    }
+    .day,.hour,.minute,.second{
+        width: 100px;
+        height: 100px;
+        margin: 1.5rem;
+        font-size: 3rem;
+    }
+    h2{
+        color: white;
+        position: relative;
+        bottom: 70px;
+        right: 26%;
+    }
+    .form-item {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        right: 22%;    
+        top: 50%;
+
+    }
+    .footer{
+        margin: 20px;
+        text-align: center;
+        color: white;
+        opacity: 0.5;
+    }
+    .footer{
+        margin-bottom: 0rem;
+        font-weight: lighter;
+        color: white;
+        bottom: 2rem;
+        position: relative;
+    }
+    .icons{
+        padding: 1rem 3rem 6rem;
+    }
+}
+
+/* tablet devices */
 @media screen and (max-width: 768px){
     nav{
         display: flex;
@@ -235,32 +243,40 @@ button:hover{
         width: 120px;
     }
     .text-box{
-        width: 88%;
         color: white;
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        text-align: left;
+        left: 11%;
     }
     .text-box h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 900;
     }
     .text-box p{
         margin-top: 1rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: white;
     }
-    .icons{
-        padding: 15px;
-        float: none;
-        display: grid;
-        text-align: right;
+    .countdown-timer{
+        bottom: 80px;
+        right: 9%;
+        padding: 10px;
+        color: white;
+    }
+    .day,.hour,.minute,.second{
+        width: 75px;
+        height: 75px;
+        margin: 0.8rem;
+        font-size: 1.5rem;
+    }
+    h2{
+        bottom: 30px;
+        right: 27%;
+    }
+    .footer{
+        bottom: 3rem;
     }
 }
 
-/* phone devices 
+/* phone devices */
 @media screen and (max-width: 425px){
     nav{
         display: flex;
@@ -301,32 +317,27 @@ button:hover{
         padding: 30px;
     }
     .text-box{
-        width: 88%;
-        color: white;
-        position: absolute;
-        top: 28%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        text-align: left;
+        left: 7%;
     }
     .text-box h1{
-        font-size: 1.7rem;
+        font-size: 1.42rem;
         font-weight: 900;
     }
     .text-box p{
         margin-top: 1rem;
-        font-size: 1rem;
-        color: white;
+        font-size: 0.92rem;
+    }
+    h2{
+        bottom: 60px;
+        right: 26%;
     }
     .icons{
         display: contents;
     }
     .countdown-timer{
-        width: 77%;
-        top: 53%;
-        position: absolute;
+        right: 10%;
+        bottom: 105px;
         padding: 10px;
-        transform: translate(0, -50%);
         display: flex;
         color: white;
         flex-direction: column;
@@ -348,21 +359,53 @@ button:hover{
     h3{
         font-size: 0.8rem;
     }
+    .footer{
+        bottom: -8rem;
+        margin-bottom: 10rem;
+        color: white;
+        position: relative;
+    }
 }
 
-/* phone devices (landscape mode) 
-@media screen and (orientation:landscape) and (max-width: 1024px){
+/* tablet devices (landscape mode) */
+@media screen and (orientation:landscape) and (max-width: 768px) {
+    .countdown-timer{
+        bottom: 60px;
+        right: 15%;
+    }
+    .text-box h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        bottom: 30px;
+        right: 29%;
+    }
+} 
+/* phone devices (landscape mode) */
+@media screen and (orientation:landscape) and (max-width: 610px){
     .text-box{
-        width: 88%;
-        color: white;
-        position: absolute;
-        top: 38%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        text-align: left;
+        bottom: 60px;
+        right: 50%;
     }
     .text-box h1{
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 900;
+    }
+    .countdown-timer{
+        top: 9px;
+        right: 15%;
+    }
+    h2{
+        top: 25px;
+        right: 28%;
+    }
+    .form-item{
+        top:11rem;
+        left: 13%;
+    }
+    .day,.hour,.minute,.second{
+        width: 55px;
+        height: 55px;
+        padding: 12px;
     }
 }

@@ -11,6 +11,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.1.1/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/76d68577fe.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    function functionAlert(msg, myYes) {
+        var confirmBox = $("#confirm");
+        confirmBox.find(".message").text(msg);
+        confirmBox.find(".yes").unbind().click(function() {
+            confirmBox.hide();
+        });
+        confirmBox.find(".yes").click(myYes);
+        confirmBox.show();
+    }
+</script>
 </head>
 
 <!----- navigation ----->
@@ -40,7 +51,7 @@
         <div class="countdown">
             <div class="countdown-day">
                 <h3 class="day">Time</h3>
-                <h3>Day</h3>
+                <h3>Days</h3>
             </div>
             <div class="countdown-hour">
                 <h3 class="hour">Time</h3>
@@ -60,21 +71,17 @@
 
 
 <!------ Get Updates ------>
-<section>
     <div>
         <h2>Get Updates</h2>
     </div>
-    <form>
-        <div class="form-item">
-            <input type="email" placeholder="jane@example.com" id="email" required>
-            <button type="button" onclick="functionAlert()"; >Sign up</button>
+        <div class="form-item" autocomplete="on">
+            <input type="email" placeholder="jane@example.com" name="email" required />
+            <input type="submit" class="btn" value="Sign up"/>
         </div>
-        <div id="confirm">
+        <div class="contain" id="confirm">
             <div class="message"><strong><span style="color: #5e079b">Your email has been registered</span></strong><br><br>We will keep you notified</div><br>
             <button class="yes">Okay</button>
         </div>
-    </form>
-</section>
 
 
 <!------ Footer ------>
@@ -103,24 +110,8 @@
 
 </script>
 
-
 <!------ Javascript for Countdown Timer ------>
 <script src="app.js"></script>
-
-
-<!------ Javacript for alert message ------>
-<script>
-    function functionAlert(msg, myYes) {
-        var confirmBox = $("#confirm");
-        confirmBox.find(".message").text(msg);
-        confirmBox.find(".yes").unbind().click(function() {
-            confirmBox.hide();
-        });
-        confirmBox.find(".yes").click(myYes);
-        confirmBox.show();
-    }
-</script>
-
 
 
 </body>

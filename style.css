@@ -293,7 +293,7 @@ h2{
         display: block;
     }
     .nav-links{
-        position: absolute;
+        position: fixed;
         background: #FD7F00;
         height: 100vh;
         width: 200px;

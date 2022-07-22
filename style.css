@@ -12,7 +12,7 @@ body{
     width: 100%;
     line-height: 1.6;
     font-family: 'Montserrat', sans-serif;
-    background: rgba(11, 13, 19, 0.7) url(assets//backgroundimage.png);
+    background: rgba(11, 13, 19, 0.7) url(assets/backgroundimage.png);
     background-blend-mode: darken;
     background-size: cover;
     background-position: center;

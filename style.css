@@ -12,9 +12,9 @@ body{
     width: 100%;
     line-height: 1.6;
     font-family: 'Montserrat', sans-serif;
-}
+}/*
 body{
-    /*background: rgba(11, 13, 19, 0.7) url(assets//backgroundimage.png);
+    background: rgba(11, 13, 19, 0.7) url(assets//backgroundimage.png);
     background-blend-mode: darken;
     background-size: cover;
     background-position: center;
@@ -62,8 +62,8 @@ h3{
     width: 68%;
     color: white;
     position: relative;
-    bottom: 5px;
-    left: 16%;
+   /* bottom: 5px;
+    left: 16%;*/
     
     text-align: left;
 }
@@ -77,8 +77,8 @@ h3{
     color: white;
 }
 .countdown-timer{
-    bottom: 40px;
-    right: 160px;
+   /* bottom: 40px;
+    right: 160px; */
     position: relative;
     padding: 10px;
     display: flex;
@@ -153,12 +153,15 @@ h2{
     color: white;
 }
 
-@media screen and (max-width: 1024px) {
-    .text-box{
+@media only screen and (max-width: 1024px) {
+        #driver-head nav ul{
+        margin-top: -10px;
+    }
+        .text-box{
         color: white;
         position: relative;
-        top: 5px;
-        left: 17%;
+       /* top: 5px;
+        left: 17%;*/
     }
     .text-box h1{
         font-size: 3rem;
@@ -170,7 +173,7 @@ h2{
         color: white;
     }
     .countdown-timer{
-        bottom: 120px;
+       /* bottom: 120px; */
         right: 7%;
         position: relative;
         padding: 10px;
@@ -184,16 +187,16 @@ h2{
     h2{
         color: white;
         position: relative;
-        bottom: 70px;
-        right: 26%;
+       /* bottom: 70px;
+        right: 26%;*/
     }
     .form-item {
         display: flex;
         position: relative;
         justify-content: center;
         align-items: center;
-        right: 22%;    
-        top: 50%;
+      /*  right: 22%;    
+        top: 50%; */
 
     }
     .footer{
@@ -215,10 +218,10 @@ h2{
 }
 
 /* tablet devices */
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 768px){
     .text-box{
         color: white;
-        left: 11%;
+       /* left: 11%;*/
     }
     .text-box h1{
         font-size: 2rem;
@@ -230,8 +233,8 @@ h2{
         color: white;
     }
     .countdown-timer{
-        bottom: 80px;
-        right: 9%;
+     /*   bottom: 80px;
+        right: 9%;*/
         padding: 10px;
         color: white;
     }
@@ -242,8 +245,8 @@ h2{
         font-size: 1.5rem;
     }
     h2{
-        bottom: 30px;
-        right: 27%;
+       /* bottom: 30px;
+        right: 27%;*/
     }
     .footer{
         bottom: 3rem;
@@ -251,9 +254,9 @@ h2{
 }
 
 /* phone devices */
-@media screen and (max-width: 425px){
+@media only screen and (max-width: 600px){
     .text-box{
-        left: 7%;
+       /* left: 7%;*/
     }
     .text-box h1{
         font-size: 1.42rem;
@@ -264,15 +267,15 @@ h2{
         font-size: 0.92rem;
     }
     h2{
-        bottom: 60px;
-        right: 26%;
+       /* bottom: 60px;
+        right: 26%;*/
     }
     .icons{
         display: contents;
     }
     .countdown-timer{
-        right: 10%;
-        bottom: 105px;
+        /*right: 10%;
+        bottom: 105px;*/
         padding: 10px;
         display: flex;
         color: white;
@@ -303,25 +306,11 @@ h2{
     }
 }
 
-/* tablet devices (landscape mode) */
-@media screen and (orientation:landscape) and (max-width: 768px) {
-    .countdown-timer{
-        bottom: 60px;
-        right: 15%;
-    }
-    .text-box h1 {
-        font-size: 2.5rem;
-    }
-    h2 {
-        bottom: 30px;
-        right: 29%;
-    }
-} 
-/* phone devices (landscape mode) */
-@media screen and (orientation:landscape) and (max-width: 610px){
+/* phone device */
+@media only screen and (max-width: 320px){
     .text-box{
-        bottom: 60px;
-        right: 50%;
+       /* bottom: 60px;
+        right: 50%;*/
     }
     .text-box h1{
         font-size: 1.8rem;
@@ -329,15 +318,15 @@ h2{
     }
     .countdown-timer{
         top: 9px;
-        right: 15%;
+       /* right: 15%;*/
     }
     h2{
-        top: 25px;
-        right: 28%;
+      /*  top: 25px;
+        right: 28%;*/
     }
     .form-item{
-        top:11rem;
-        left: 13%;
+       /* top:11rem;
+        left: 13%;*/
     }
     .day,.hour,.minute,.second{
         width: 55px;

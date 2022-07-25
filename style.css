@@ -10,46 +10,45 @@ html{
 body{
     height: 100%;
     width: 100%;
-    line-height: 1.6;
-    font-family: 'Montserrat', sans-serif;
-    background: rgba(11, 13, 19, 0.7) url(assets/backgroundimage.png);
-    background-blend-mode: darken;
+    background: rgba(11, 13, 19, 0.7) url(assets//backgroundimage.png);
     background-size: cover;
+    position: relative;
     background-position: center;
-}*/
+    background-blend-mode: darken;
+    font-family: 'Montserrat', sans-serif;
+}
 
-/* navigation menu */
-#driver-head{
-    padding: 60px;
+/* navigation */
+nav{
     display: flex;
-    margin: 0 auto;
+    padding: 2% 6%;
     justify-content: space-between;
+    align-content: center;
+    text-align: center;
     align-items: center;
 }
-#driver-head img{
-    width: 20%;
+nav img{
+    width: 120px;
 }
-#driver-head nav{
-    margin: 0;
-    padding: 0;
-}
-#driver-head nav ul{
+nav ul{
     list-style: none;
 }
-#driver-head nav ul{
+nav ul li{
     display: inline-block;
     padding: 0 20px;
+    position: relative;
 }
-#driver-head a{
+nav ul li a{
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 700;
     opacity: 0.8;
 }
-#driver-head a:hover{
+nav ul li a:hover{
     text-decoration: none;
-    font-weight: 700;
+    color: #fd7f00;
+    transition: 0.5s;
 }
 p{
     opacity: 0.7;
@@ -63,8 +62,8 @@ h3{
     width: 68%;
     color: white;
     position: relative;
-   /* bottom: 5px;
-    left: 16%;*/
+    bottom: 5px;
+    left: 16%;
     
     text-align: left;
 }
@@ -78,8 +77,8 @@ h3{
     color: white;
 }
 .countdown-timer{
-   /* bottom: 40px;
-    right: 160px; */
+    bottom: 10px;
+    right: 200px;
     position: relative;
     padding: 10px;
     display: flex;
@@ -95,10 +94,10 @@ h3{
     text-align: center;
 }
 .day,.hour,.minute,.second{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 1.5rem;
-    font-size: 3rem;
+    font-size: 1.7rem;
     opacity: 0.5;
     color: white;
     background: #5E079B;
@@ -106,46 +105,139 @@ h3{
     border-radius: 50%;
     padding: 20px;
 }
+#em-icon{
+    position: relative;
+    right: 33%;
+    top: 12px;
+    text-align: center;
+}
 h2{
     color: white;
     position: relative;
-    right: 28%;
+    right: 26%;
+    bottom: 15px;
     text-align: center;
 }
 .form-item{
     display: flex;
     position: relative;
-    top: 50%; 
+    top: 1px;
     justify-content: center;
     align-items: center;
-    right: 22%;
-
+    right: 9%;
 }
-
-/* footer */
+input{
+    border: none;
+    padding: 0px 0px 12px 0px;
+    width: 38%;
+    font-size: 1rem;
+    border-bottom: 2px solid #FD7F00;
+    border-radius: none;
+    outline: none;
+    background: none;
+    color: white;
+}
+button{
+    background-color: #fd7f00;
+    width: 12%;
+    color: black;
+    padding: 18px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 2%;
+    bottom: 10px;
+    transition: all 1s;
+}
+button:hover{
+    background-color: #050008;
+    color: whitesmoke;
+}
+.Modal{
+    -webkit-transition: 1s;
+    overflow: auto;
+    transition: all 0.2s linear;
+    position: relative;
+    bottom: 34rem;
+    opacity: 0.9;
+}
+.Modal-content{
+    display: flex;
+    background-color: #C0C0C0;
+    color: #000000;
+    border: 0.5px solid #aaa;
+    position: fixed;
+    padding: 50px;
+    width: 45%;
+    height: 345px;
+    left: 27%;
+    border-radius: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.ModalOpen{
+    overflow: auto;
+}
+.is-hidden{
+    display: none;
+}
+.is-visuallyhidden{
+    opacity: 0;
+}
+#confirm button{
+    background-color: #5E079B;
+    border-radius: 20px;
+    border: 0.1px solid #FD7F00;
+    color: white;
+    padding: 19px;
+    margin-right: 40px;
+    margin-top: 50px;
+    text-align: center;
+    width: 40%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 1s;
+}
+#confirm .message{
+    text-align: center;
+}
+.message{
+    font-size: 1.8rem;
+}
+.is-blurred{
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+}
+#confirm button:hover{
+    background-color: #050008;
+    color: whitesmoke;
+}
 .footer{
-    margin: 20px;
     text-align: center;
     color: white;
     opacity: 0.5;
 }
 .footer{
-    margin-bottom: 0rem;
+    margin-top: 7rem;
     font-weight: lighter;
     color: white;
-    bottom: 1rem;
+    bottom: 2rem;
     position: relative;
 }
-.icons .fa{
-    margin: 0 0.5em;
-    cursor: pointer;
-    padding: 1em 0;    
-}
 .icons{
-    padding: 6rem 3rem;
-    float: none;
+    position: absolute;
+    padding: 0rem 4rem 0rem;
     display: grid;
     text-align: right;
+    bottom: 100px;
+    left: 86%;
+    margin-top: 10rem;
 }
 .icons a{
     font-size: 1.6rem;
@@ -154,15 +246,52 @@ h2{
     color: white;
 }
 
-@media only screen and (max-width: 1024px) {
-        #driver-head nav ul{
-        margin-top: -10px;
+@media only screen and (min-width: 1440px){
+    .text-box h1{
+        font-size: 4rem;
     }
-        .text-box{
-        color: white;
-        position: relative;
-       /* top: 5px;
-        left: 17%;*/
+    .text-box p{
+        margin-top: 1.5rem;
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+        top: 60px;
+        right: 26%;
+    }
+    .countdown-timer{
+        right: 185px;
+        top: 1px;
+        font-size: 1.5rem;
+    }
+    .day,.hour,.minute,.second{
+        width: 120px;
+        height: 120px;
+        font-size: 3.5rem;
+    }
+    .Modal{
+        bottom: 45rem;
+    }
+    .Modal-content{
+        height: 355px;
+    }
+    .form-item{
+        top: 95px;
+    }
+    .footer{
+        bottom: 2rem;
+        margin-top: 12rem;
+    }
+    #em-icon{
+        right: 33%;
+        top: 90px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .text-box{
+        top: 5px;
+        left: 17%;
     }
     .text-box h1{
         font-size: 3rem;
@@ -174,164 +303,237 @@ h2{
         color: white;
     }
     .countdown-timer{
-       /* bottom: 120px; */
-        right: 7%;
+        bottom: 6px;
+        right: 9%;
         position: relative;
         padding: 10px;
+        font-size: 1.2rem;
     }
     .day,.hour,.minute,.second{
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         margin: 1.5rem;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     h2{
         color: white;
         position: relative;
-       /* bottom: 70px;
-        right: 26%;*/
+        top: 10px;
+        right: 23.5%;
+    }
+    #em-icon{
+        top: 37px;
+        right: 32%;
     }
     .form-item {
         display: flex;
         position: relative;
         justify-content: center;
         align-items: center;
-      /*  right: 22%;    
-        top: 50%; */
-
+        right: 8%;    
+        top: 50px;
     }
     .footer{
-        margin: 20px;
         text-align: center;
         color: white;
         opacity: 0.5;
     }
     .footer{
-        margin-bottom: 0rem;
-        font-weight: lighter;
-        color: white;
-        bottom: 2rem;
+        top: 3rem;
         position: relative;
+        margin-bottom: 0rem;
     }
     .icons{
-        padding: 1rem 3rem 6rem;
+        padding: 0rem 4rem 1rem;
     }
 }
 
 /* tablet devices */
 @media only screen and (max-width: 768px){
+    nav{
+        display: flex;
+        padding: 3% 6%;
+        justify-content: space-between;
+        align-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    nav img{
+        width: 120px;
+    }
+    nav ul li{
+        padding: 0 10px;
+        margin-top: 7px;
+    }
+    nav ul li a{
+        font-size: 1.3rem;
+    }
     .text-box{
         color: white;
-       /* left: 11%;*/
+        left: 11%;
     }
     .text-box h1{
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: 900;
     }
     .text-box p{
-        margin-top: 1rem;
-        font-size: 1rem;
+        margin-top: 1.2rem;
+        font-size: 1.1rem;
         color: white;
     }
     .countdown-timer{
-     /*   bottom: 80px;
-        right: 9%;*/
-        padding: 10px;
-        color: white;
+        top: 1px;
+        right: 17%;
+        font-size: 0.8rem;
     }
     .day,.hour,.minute,.second{
-        width: 75px;
-        height: 75px;
+        width: 65px;
+        height: 65px;
         margin: 0.8rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     h2{
-       /* bottom: 30px;
-        right: 27%;*/
+        bottom: 30px;
+        right: 27%;
+        font-size: 1.2rem;
+    }
+    #em-icon{
+        top: 33px;
+        right: 37%;
+    }
+    input{
+        width: 45%;
+    }
+    .form-item{
+        top: 45px;
+        right: 9%;
+    }
+    .Modal{
+        bottom: 24rem;
+    }
+    .Modal-content{
+        height: 260px;
+        width: 50%;
+        left: 21%;
+        font-size: 1.5rem;
+    }
+    button{
+        width: 15%;
+        padding: 15px;
+        left: 3%;
+        bottom: 6px;
     }
     .footer{
-        bottom: 3rem;
+        top: 5rem;
+        margin-top: 0rem;
+    }
+    .icons{
+        padding: 0rem 2rem 1rem;
+        bottom: 28px;
     }
 }
 
 /* phone devices */
-@media only screen and (max-width: 600px){
+@media screen and (max-width: 600px){
+    nav{
+        padding: 6% 6%;
+    }
+    nav img{
+        width: 100px;
+    }
+    nav ul li{
+        padding: 0 3px;
+        margin-top: 5px;
+    }
+    nav ul li a{
+        font-size: 1rem;
+        font-weight: 400;
+    }
     .text-box{
-       /* left: 7%;*/
+        left: 7%;
+        top: -9px;
     }
     .text-box h1{
-        font-size: 1.42rem;
+        font-size: 1.35rem;
         font-weight: 900;
     }
     .text-box p{
         margin-top: 1rem;
-        font-size: 0.92rem;
+        font-size: 0.8rem;
     }
     h2{
-       /* bottom: 60px;
-        right: 26%;*/
+        bottom: 60px;
+        right: 26%;
     }
     .icons{
         display: contents;
     }
     .countdown-timer{
-        /*right: 10%;
-        bottom: 105px;*/
+        right: 10%;
+        bottom: 105px;
         padding: 10px;
-        display: flex;
-        color: white;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
     }
     .day,.hour,.minute,.second{
         width: 60px;
         height: 60px;
-        margin: 0.4rem;
         font-size: 1.1rem;
-        color: white;
-        background: #5E079B;
-        border: 2px solid white;
-        border-radius: 50%;
         padding: 17px;
     }
     h3{
         font-size: 0.8rem;
     }
+    input{
+        width: 50%;
+        right: 5%;
+    }
+    button{
+        width: 30%;
+        padding: 13px;
+        left: -213px;
+        top: 53px;
+    }
+    .form-item{
+        top: 0px;
+        right: 2%;
+    }
     .footer{
-        bottom: -8rem;
-        margin-bottom: 10rem;
-        color: white;
-        position: relative;
+        bottom: 0rem;
+        margin-bottom: 7rem;
+    }
+    .icons a{
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+    p{
+        font-size: 1rem;
     }
 }
 
-/* phone device */
-@media only screen and (max-width: 320px){
-    .text-box{
-       /* bottom: 60px;
-        right: 50%;*/
+/* smaller phone devices */
+@media only screen and (max-width: 320px) {
+    nav{
+        padding:6% 6% ;
     }
-    .text-box h1{
-        font-size: 1.8rem;
-        font-weight: 900;
+    nav img{
+        width: 90px;
+    }
+    nav ul li{
+        padding: 0 1px;
+        margin-top: 3px;
+    }
+    nav ul li a{
+        font-size: 0.8rem;
+        font-weight: 700;
     }
     .countdown-timer{
-        top: 9px;
-       /* right: 15%;*/
+        bottom: 60px;
+        right: 15%;
     }
-    h2{
-      /*  top: 25px;
-        right: 28%;*/
+    .text-box h1 {
+        font-size: 2.5rem;
     }
-    .form-item{
-       /* top:11rem;
-        left: 13%;*/
-    }
-    .day,.hour,.minute,.second{
-        width: 55px;
-        height: 55px;
-        padding: 12px;
+    h2 {
+        bottom: 30px;
+        right: 29%;
     }
 }

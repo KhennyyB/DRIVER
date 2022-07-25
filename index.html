@@ -11,43 +11,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.1.1/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/76d68577fe.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-    function functionAlert(msg, myYes) {
-        var confirmBox = $("#confirm");
-        confirmBox.find(".message").text(msg);
-        confirmBox.find(".yes").unbind().click(function() {
-            confirmBox.hide();
-        });
-        confirmBox.find(".yes").click(myYes);
-        confirmBox.show();
-    }
-</script>
 </head>
 
-<!----- navigation ----->
-<body>
-<div class="container">
-    <header id="driver-head">
-       <div class="logo">
-        <a href="index.html"><img src="assets//driverlogo1.png" alt="Driver Logo"></a>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">REGISTER</a></li>
-                <li><a href="">ABOUT US</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-<!------ Textbox ------>
+<!----- header ----->
+<div id="myContainer">
+    <nav>
+        <a href="index.html"><img src="assets//driverlogo1.png"></a>
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">CONTACT US</a></li>
+        </ul>
+    </nav>
 <div class="text-box">
     <h1><strong>Something <span style="color: #FD7F00;">ultra</span> is coming<br>Be the first to know</strong></h1>
     <p>We are creating the ideal driver education<br>experience, connecting aspiring African<br>drivers and certified instructors<br>everywhere.</p>
 </div>
-
 
 <!------ Countdown Timer ------>
 <section class="countdown-timer">
@@ -75,35 +54,83 @@
 
 
 <!------ Get Updates ------>
-    <div>
+        <div id="em-icon">
+            <i class="fa fa-envelope-o" style="color:#FD7F00;" aria-hidden="true"></i>
+        </div>
         <h2>Get Updates</h2>
-    </div>
-        <div class="form-item" autocomplete="on">
-            <input type="email" placeholder="jane@example.com" name="email" required />
-            <input type="submit" class="btn" value="Sign up"/>
-        </div>
-        <div class="contain" id="confirm">
-            <div class="message"><strong><span style="color: #5e079b">Your email has been registered</span></strong><br><br>We will keep you notified</div><br>
-            <button class="yes">Okay</button>
-        </div>
+        <form name="myForm" action="#" onsubmit="return validateForm()" method="post" required>
+            <div class="form-item">
+                <input type="email" placeholder="jane@example.com" name="email" required>
+                <button type="submit" id="myBtn">Sign up</button>
+            </div>
+       </form>
 
 
 <!------ Footer ------>
-
 <section class="footer">
     <div class="icons">
-        <a href="#" class="fab fa-instagram" style="color:#f56040;" aria-hidden="true" alt="Instagram"></a>
-        <a href="#" class="fab fa-linkedin" style="color:#0072b1;" aria-hidden="true" alt="LinkedIn"></a>
-        <a href="#" class="fab fa-facebook" style="color:#3b5998;" aria-hidden="true" alt="Facebook"></a>
-        <a href="#" class="fab fa-twitter" style="color:#00aced;" aria-hidden="true" alt="Twitter"></a>  
+        <a href="#" class="fab fa-instagram" style="color:#f56040;" alt="Instagram"></a>
+        <a href="#" class="fab fa-linkedin" style="color:#0072b1;" alt="LinkedIn"></a>
+        <a href="#" class="fab fa-facebook" style="color:#3b5998;" alt="Facebook"></a>
+        <a href="#" class="fab fa-twitter" style="color:#00aced;" alt="Twitter"></a>  
     </div>
     <p>Copyright © Driver 2022. All rights reserved.</p>
 </section>
 
+</div>
 
-<!------ Javascript for Toggle Menu ------>
-<script src="index.js"></script>
+    <!------ Alert Modal------>
+<div id="myModal" class="Modal is-hidden is-visuallyHidden">
 
+    <!------ Modal content ------>
+    <div class="Modal-content">
+        <div class="contain" id="confirm">
+            <div class="message"><strong><span style="color: #5e079b">Your email has been registered</span></strong><br><br>We will keep you notified</div><br> <span id="closeModal" class="Close"><button>Okay</button></span>
+        </div>
+    </div>
+</div>
+
+
+
+<!------ Javascript for Alert Modal ------>
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    // Get the main container and the body
+    var body = document.getElementsByTagName('body');
+    var container = document.getElementById('myContainer');
+    // Get the open button
+    var btnOpen = document.getElementById("myBtn");
+    // Get the close button
+    var btnClose = document.getElementById("closeModal");
+    // Open the modal
+    btnOpen.onclick = function() {
+        modal.className = "Modal is-visuallyHidden";
+        setTimeout(function() {
+            container.className = "MainContainer is-blurred";
+            modal.className = "Modal";
+        }, 100);
+        container.parentElement.className = "ModalOpen";
+    }
+    // Close the modal
+    btnClose.onclick = function() {
+        modal.className = "Modal is-hidden is-visuallyHidden";
+        body.className = "";
+        container.className = "MainContainer";
+        container.parentElement.className = "";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.className = "Modal is-hidden";
+            body.className = "";
+            container.className = "MainContainer";
+            container.parentElement.className = "";
+        }
+    }
+       
+
+</script>
 <!------ Javascript for Countdown Timer ------>
 <script src="app.js"></script>
 

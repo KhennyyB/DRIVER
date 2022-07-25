@@ -412,16 +412,27 @@ button:hover{
         bottom: 24rem;
     }
     .Modal-content{
-        height: 260px;
+        height: 220px;
         width: 50%;
-        left: 21%;
-        font-size: 1.5rem;
+        left: 25%;
+        padding: 30px;
+    }
+    .message{
+        font-size: 1.3rem;
     }
     button{
         width: 15%;
         padding: 15px;
         left: 3%;
         bottom: 6px;
+    }
+    #confirm button{
+        padding: 15px;
+        width: 55%;
+        font-size: 1rem;
+        border-radius: 15px;
+        margin-top: 18px;
+        margin-right: 22px;
     }
     .footer{
         top: 5rem;

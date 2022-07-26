@@ -459,6 +459,9 @@ button:hover{
         padding: 0rem 1rem 1rem;
         bottom: 28px;
     }
+    .footer p{
+        font-size: 1rem;
+    }
 }
 
 /* phone devices */

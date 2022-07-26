@@ -482,7 +482,7 @@ button:hover{
         top: -9px;
     }
     .text-box h1{
-        font-size: 1.35rem;
+        font-size: 1.3rem;
         font-weight: 900;
     }
     .text-box p{
@@ -490,12 +490,12 @@ button:hover{
         font-size: 0.8rem;
     }
     #em-icon{
-        top: 0px;
+        top: 1px;
         right: 40%;
     }
     h2{
         top: -20px;
-        right: 25%;
+        right: 24%;
         font-size: 1rem;
     }
     .icons{
@@ -553,8 +553,8 @@ button:hover{
         font-size: 1.3rem;
         padding: 10px;
     }
-    p{
-        font-size: 1rem;
+    .footer p{
+        font-size: 0.8rem;
     }
 }
 
@@ -599,6 +599,9 @@ button:hover{
     }
     .footer{
         top: 6rem;
+    }
+    .footer p{
+        font-size: 1rem;
     }
 }
 

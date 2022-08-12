@@ -8,178 +8,58 @@ html{
     font-size: 16px;
 }
 body{
-    height: 100%;
     width: 100%;
-    background: rgba(9, 9, 10, 0.7) url(assets//backgroundimage.png);
+    min-height: 120vh;
+    background: rgba(9, 9, 10, 0.6) url(assets//backgroundimage.png);
     background-size: cover;
-    position: relative;
     background-position: center;
     background-blend-mode: darken;
     font-family: 'Montserrat', sans-serif;
+}
+#myContainer{
+
+    position: relative;
 }
 
 /* navigation */
 nav{
     display: flex;
-    padding: 2% 6%;
+    padding: 40px 30px;
     justify-content: space-between;
     align-content: center;
     text-align: center;
     align-items: center;
 }
 nav img{
-    width: 120px;
-}
-nav ul{
-    list-style: none;
-}
-nav ul li{
-    display: inline-block;
-    padding: 0 20px;
-    position: relative;
-}
-nav ul li a{
-    text-decoration: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    font-weight: 700;
-    opacity: 0.8;
-}
-nav ul li a:hover{
-    text-decoration: none;
-    color: #fd7f00;
-    transition: 0.5s;
+    width: 80px;
 }
 p{
     opacity: 0.7;
 }
-h3{
-    opacity: 0.9;
-}
 
-/* contents */ 
-.text-box{
-    width: 68%;
-    color: white;
-    position: relative;
-    bottom: 5px;
-    left: 16%;
-    
-    text-align: left;
-}
-.text-box h1{
-    font-size: 3.3rem;
-    font-weight: 900;
-}
-.text-box p{
-    margin-top: 1rem;
-    font-size: 1.6rem;
-    color: white;
-}
-.countdown-timer{
-    bottom: 25px;
-    right: 200px;
-    position: relative;
-    padding: 10px;
-    display: flex;
-    color: white;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-}
-.countdown{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-.day,.hour,.minute,.second{
-    width: 80px;
-    height: 80px;
-    margin: 1.5rem;
-    font-size: 1.7rem;
-    opacity: 0.5;
-    color: white;
-    background: #5E079B;
-    border: 2px solid white;
-    border-radius: 50%;
-    padding: 20px;
-}
-#em-icon{
-    position: relative;
-    right: 33%;
-    top: 12px;
-    text-align: center;
-}
-h2{
-    color: white;
-    position: relative;
-    right: 26%;
-    bottom: 15px;
-    text-align: center;
-}
-.form-item{
-    display: flex;
-    position: relative;
-    top: 1px;
-    justify-content: center;
-    align-items: center;
-    right: 9%;
-}
-input{
-    border: none;
-    padding: 0px 0px 12px 0px;
-    width: 38%;
-    font-size: 1rem;
-    border-bottom: 2px solid #FD7F00;
-    border-radius: none;
-    outline: none;
-    background: none;
-    color: white;
-}
-button{
-    background-color: #fd7f00;
-    width: 12%;
-    color: black;
-    padding: 18px;
-    border-radius: 20px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    left: 2%;
-    bottom: 10px;
-    transition: all 1s;
-}
-button:hover{
-    background-color: #050008;
-    color: whitesmoke;
-}
+/* modal contents */ 
 .Modal{
+    display: flex;
     -webkit-transition: 1s;
     overflow: auto;
     transition: all 0.2s linear;
-    position: relative;
-    bottom: 34rem;
     opacity: 0.9;
+    position: fixed;
+    bottom: 350px;
 }
 .Modal-content{
-    display: flex;
     background-color: #C0C0C0;
-    color: #000000;
+    color: black;
     border: 0.5px solid #aaa;
-    position: fixed;
-    padding: 50px;
-    width: 45%;
-    height: 345px;
-    left: 27%;
+    width: 80%;
+    padding: 25px;
+    height: 260px;
+    overflow: auto;
     border-radius: 30px;
-    box-sizing: border-box;
     text-align: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    position: fixed;
+    left: 45px;
 }
 .ModalOpen{
     overflow: auto;
@@ -190,17 +70,19 @@ button:hover{
 .is-visuallyhidden{
     opacity: 0;
 }
+.is-blurred{
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+}
 #confirm button{
     background-color: #5E079B;
-    border-radius: 20px;
-    border: 0.1px solid #FD7F00;
+    border-radius: 15px;
     color: white;
-    padding: 19px;
-    margin-right: 40px;
-    margin-top: 50px;
+    padding: 15px;
     text-align: center;
-    width: 40%;
-    font-size: 1.2rem;
+    width: 50%;
+    margin-left: 4px;
+    font-size: 16px;
     cursor: pointer;
     transition: all 1s;
 }
@@ -208,543 +90,219 @@ button:hover{
     text-align: center;
 }
 .message{
-    font-size: 1.8rem;
+    font-size: 24px;
 }
-.is-blurred{
-    filter: blur(6px);
-    -webkit-filter: blur(6px);
+#confirm .message p{
+    font-size: 20px;
 }
 #confirm button:hover{
-    background-color: #050008;
-    color: whitesmoke;
-}
-.footer{
-    text-align: center;
-    color: white;
     opacity: 0.5;
 }
-.footer{
-    margin-top: 7rem;
-    font-weight: lighter;
+
+/* contents */
+.text-box{
+    width: 80%;
     color: white;
-    bottom: 2rem;
-    position: relative;
-}
-.icons{
     position: absolute;
-    padding: 0rem 4rem 0rem;
-    display: grid;
-    text-align: right;
-    bottom: 100px;
-    left: 86%;
-    margin-top: 10rem;
+    text-align: left;
+    left: 30px;
+    top: 110px;
 }
-.icons a{
-    font-size: 1.6rem;
-    margin: 18px 10px 18px 10px;
-    text-decoration: none;
+.text-box h1{
+    font-size: 27px;
+    font-weight: 900;
+}
+.text-box p{
+    margin-top: 16px;
+    font-size: 13px;
+}
+.countdown-timer{
+    display: flex;
+    position: absolute;
+    padding: 10px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    top: 260px;
+    left: 5px;
+}
+.countdown{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.day,.hour,.minute,.seconds{
+    width: 60px;
+    height: 60px;
+    margin: 15px;
+    font-size: 18px;
+    padding: 18px;
+    color: white;
+    background: rgba(64, 29, 88, 0.5);
+    border: 1px solid white;
+    border-radius: 50%;
+}
+h3{
+    font-size: 14px;
+}
+.updates{
+    color: white;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    top: 26rem;
+    left: 32px;
+    font-size: 10px;
+}
+.form-item{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 29rem;
+    left: 32px;
+}
+input{
+    border: none;
+    padding: 0px 0px 4px 0px;
+    width: 250px;
+    font-size: 16px;
+    border-bottom: 2px solid #fd7f00;
+    border-radius: none;
+    outline: none;
+    background: none;
     color: white;
 }
-
-@media only screen and (min-width: 1440px){
-    .text-box h1{
-        font-size: 4rem;
-    }
-    .text-box p{
-        margin-top: 1.5rem;
-        font-size: 2rem;
-    }
-    h2{
-        font-size: 1.7rem;
-        top: 60px;
-        right: 25.5%;
-    }
-    .countdown-timer{
-        right: 185px;
-        top: 1px;
-        font-size: 1.5rem;
-    }
-    .day,.hour,.minute,.second{
-        width: 120px;
-        height: 120px;
-        font-size: 3.5rem;
-    }
-    .Modal{
-        bottom: 45rem;
-    }
-    .Modal-content{
-        height: 355px;
-    }
-    .form-item{
-        top: 95px;
-    }
-    .footer{
-        bottom: 2rem;
-        margin-top: 12rem;
-    }
-    #em-icon{
-        right: 33%;
-        top: 90px;
-        font-size: 1.2rem;
-    }
-    .footer p{
-        font-size: 1.5rem;
-    }
+#item button{
+    background-color: #fd7f00;
+    width: 150px;
+    padding: 13px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 70px;
+    right: 102px;
+    transition: all 1s;
+}
+#item button:hover{
+    opacity: 0.5;
 }
 
-@media only screen and (max-width: 1024px) {
-    .text-box{
-        top: 5px;
-        left: 17%;
-    }
-    .text-box h1{
-        font-size: 3rem;
-        font-weight: 900;
-    }
-    .text-box p{
-        margin-top: 1rem;
-        font-size: 1.6rem;
-        color: white;
-    }
-    .countdown-timer{
-        bottom: 6px;
-        right: 9%;
-        position: relative;
-        padding: 10px;
-        font-size: 1.2rem;
-    }
-    .day,.hour,.minute,.second{
-        width: 90px;
-        height: 90px;
-        margin: 1.5rem;
-        font-size: 2.5rem;
-    }
-    h2{
-        color: white;
-        position: relative;
-        top: 9px;
-        right: 22.5%;
-    }
-    .Modal-content{
-        padding: 55px;
-        width: 50%;
-    }
-    #confirm .message{
-        font-size: 1.5rem;
-    }
-    #confirm button{
-        width: 45%;
-        margin-right: 27px;
-    }
-    #em-icon{
-        top: 37px;
-        right: 32%;
-    }
-    .form-item {
-        display: flex;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        right: 8%;    
-        top: 50px;
-    }
-    .footer{
-        text-align: center;
-        color: white;
-        opacity: 0.5;
-    }
-    .footer{
-        top: 1rem;
-        margin-bottom: 0rem;
-    }
-    .footer p{
-        font-size: 1.2rem;
-    }
-    .icons{
-        padding: 0rem 2rem 1rem;
-    }
-}
 
-/* tablet devices */
-@media only screen and (max-width: 768px){
+/* tablet view */
+@media only screen and (min-width: 768px) {
     nav{
-        display: flex;
-        padding: 3% 6%;
-        justify-content: space-between;
-        align-content: center;
-        text-align: center;
-        align-items: center;
+        padding: 35px 45px;
     }
     nav img{
-        width: 120px;
-    }
-    nav ul li{
-        padding: 0 10px;
-        margin-top: 7px;
-    }
-    nav ul li a{
-        font-size: 1.3rem;
-    }
-    .text-box{
-        color: white;
-        left: 11%;
-    }
-    .text-box h1{
-        font-size: 2.2rem;
-        font-weight: 900;
-    }
-    .text-box p{
-        margin-top: 1.2rem;
-        font-size: 1.1rem;
-        color: white;
-    }
-    .countdown-timer{
-        top: 1px;
-        right: 17%;
-        font-size: 0.8rem;
-    }
-    .day,.hour,.minute,.second{
-        width: 65px;
-        height: 65px;
-        margin: 0.8rem;
-        font-size: 1.2rem;
-    }
-    h2{
-        bottom: 30px;
-        right: 27%;
-        font-size: 1.2rem;
-    }
-    #em-icon{
-        top: 33px;
-        right: 37%;
-    }
-    input{
-        width: 45%;
-    }
-    .form-item{
-        top: 45px;
-        right: 9%;
+        width: 90px;
     }
     .Modal{
-        bottom: 24rem;
+        bottom: 380px;
     }
     .Modal-content{
-        height: 275px;
-        width: 55%;
-        left: 25%;
         padding: 45px;
+        width: 60%;
+        height: 275px;
+        left: 148px;
+        border-radius: 30px;
     }
-    #confirm .message{
-        font-size: 1.3rem;
+    .message{
+        font-size: 22px;
     }
-    button{
-        width: 15%;
-        padding: 15px;
-        left: 3%;
-        bottom: 6px;
+    #confirm .message p{
+        font-size: 18px;
     }
     #confirm button{
-        padding: 15px;
-        width: 55%;
-        font-size: 1rem;
-        border-radius: 15px;
-        margin-top: 18px;
-        margin-right: 22px;
+        width: 30%;
+        font-size: 16px;
     }
-    .footer{
-        top: 5rem;
-        margin-top: 0rem;
+    .text-box{
+        left: 48px;
     }
-    .icons{
-        padding: 0rem 1rem 1rem;
-        bottom: 28px;
+    .text-box h1{
+        font-size: 35px;
     }
-    .footer p{
-        font-size: 1rem;
+    .text-box p{
+        font-size: 16px;
+    }
+    .countdown-timer{
+        top: 290px;
+        left: 20px;
+    }
+    .day,.hour,.minute,.seconds{
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    .updates{
+        top: 28.5rem;
+        left: 48px;
+        font-size: 12px;
     }
 }
 
-/* phone devices */
-@media only screen and (max-width: 425px){
+
+/*desktop view*/
+@media only screen and (min-width: 1024px) {
     nav{
-        padding: 6% 6%;
+        padding: 35px 45px;
     }
     nav img{
         width: 100px;
     }
-    nav ul li{
-        padding: 0 3px;
-        margin-top: 5px;
-    }
-    nav ul li a{
-        font-size: 1rem;
-        font-weight: 400;
-    }
-    .text-box{
-        left: 7%;
-        top: -9px;
-    }
-    .text-box h1{
-        font-size: 1.3rem;
-        font-weight: 900;
-    }
-    .text-box p{
-        margin-top: 1rem;
-        font-size: 0.8rem;
-    }
-    #em-icon{
-        top: 1px;
-        right: 40%;
-    }
-    h2{
-        top: -20px;
-        right: 24%;
-        font-size: 1rem;
-    }
-    .icons{
-        display: contents;
-    }
-    .countdown-timer{
-        right: 10%;
-        top: -15px;
-        padding: 10px;
-    }
-    .day,.hour,.minute,.second{
-        width: 50px;
-        height: 50px;
-        font-size: 0.9rem;
-        padding: 15px;
-    }
-    h3{
-        font-size: 0.8rem;
-    }
-    input{
-        width: 50%;
-        right: 5%;
-    }
-    button{
-        width: 30%;
-        padding: 13px;
-        left: -213px;
-        top: 70px;
-    }
-    .form-item{
-        top: -12px;
-        right: 2%;
-    }
     .Modal{
-        bottom: 27rem;
+        bottom: 410px;
     }
     .Modal-content{
-        height: 220px;
-        left: 10%;
-        width: 79%;
-        padding: 25px;
+        padding: 62px;
+        width: 56%;
+        height: 345px;
+        left: 265px;
+        border-radius: 60px;
+    }
+    .message{
+        font-size: 30px;
+    }
+    #confirm .message p{
+        font-size: 24px;
     }
     #confirm button{
-        left: 12px;
-        padding: 15px;
-        border-radius: 15px;
-        width: 50%;
-        top: -20px;
-    }
-    .footer{
-        bottom: 0rem;
-        margin-bottom: 7rem;
-    }
-    .icons a{
-        font-size: 1.3rem;
-        padding: 10px;
-    }
-    .footer p{
-        font-size: 0.8rem;
-    }
-}
-
-/* landscape mode for mobile & tablet devices */
-@media only screen and (max-width: 610px) and (min-width: 475px) {
-    .text-box h1{
-        font-size: 1.8rem;
-    }
-    .countdown-timer{
-        right: 11%;
-        bottom: 11px;
-    }
-    .form-item{
-        right: 6%;
-    }
-    h2{
-        font-size: 1rem;
-        top: 14px;
-        right: 26%;
-    }
-    button{
-        width: 20%;
-        bottom: 6px;
-        padding: 16px;
-    }
-    .Modal{
-        bottom: 23rem;
-    }
-    .Modal-content{
-        height: 280px;
-        width: 61%;
-        left: 18%;
-    }
-    #em-icons{
-        padding: 0rem 1rem 1rem;
-    }
-    .icons{
-        bottom: 50px;
-    }
-    .icons a{ 
-        font-size: 1.2rem;
-    }
-    .footer{
-        top: 6rem;
-    }
-    .footer p{
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-    nav ul li a{
-        font-size: 0.9rem;
-    }
-    .text-box h1{
-        font-size: 1.1rem;
-    }
-    .text-box p{
-        font-size: 0.75rem;
-    }
-    .countdown-timer{
-        top: -10px;
-    }
-    .day,.hour,.minute,.second{
-        width: 50px;
-        height: 50px;
-        font-size: 0.9rem;
-        padding: 13px;
-        margin: 8px;
-    }
-    h2{
-        right: 23%;
-        top: -15px;
-    }
-    #em-icon{
-        top: 4px;
-    }
-    input{
-        font-size: 0.8rem;
-        bottom: 10px;
-    }
-    .form-item{
-        top: 0px;
-    }
-    button{
-        left: -190px;
-        top: 75px;
-    }
-    .Modal{
-        bottom: 29rem;
-    }
-    #confirm button{
-        top: -10px;
-        margin-right: 26px;
-    }
-    #confirm .message{
-        font-size: 1.1rem;
-    }
-    .footer{
-        margin-bottom: 9rem;
-        top: 7rem;
-    }
-    .footer p{
-        font-size: 0.8rem;
-    }
-}
-
-
-/* smaller phone devices */
-@media only screen and (max-width: 320px) {
-    nav{
-        padding:6% 6% ;
-    }
-    nav img{
-        width: 90px;
-    }
-    nav ul li a{
-        font-size: 0.7rem;
-        font-weight: 700;
+        width: 25%;
+        margin-top: 20px;
+        font-size: 17px;
     }
     .text-box{
-        top: 5px;
+        left: 150px;
     }
-    .text-box h1 {
-        font-size: 1rem;
+    .text-box h1{
+        font-size: 48px;
     }
     .text-box p{
-        font-size: 10.3px;
-    }
-    h3{
-        font-size: 0.7rem;
+        font-size: 23px;
     }
     .countdown-timer{
-        top: 10px;
-        right: 7%;
+        top: 350px;
+        left: 120px;
     }
-    .day,.hour,.minute,.second{
-        width: 45px;
-        height: 45px;
-        font-size: 0.7rem;
-        padding: 13px;
-        margin: 8px;
-    }
-    h2 {
-        top: 5px;
-        right: 20%;
-    }
-    #em-icon{
-        top: 25px;
-        right: 39.5%;
-    }
-    .form-item{
-        top: 20px;
-        right: 0%;
-    }
-    input{
-        width: 55%;
-        font-size: 0.8rem;
-    }
-    button{
-        left: -178px;
-        border-radius: 14px;
-        padding: 15px;
-        font-size: 0.8rem;
-    }
-    .Modal{
-        bottom: 30rem;
-    }
-    .Modal-content{
-        width: 86%;
-        left: 7%;
-        height: 180px;
+    .day,.hour,.minute,.seconds{
+        width: 75px;
+        height: 75px;
+        margin: 20px;
+        font-size: 24px;
         padding: 20px;
     }
-    #confirm .message{
-        font-size: 1.1rem;
-    }
-    #confirm button{
-        top: -20px;
-        font-size: 0.8rem;
-        padding: 12px;
-    }
-    .footer{
-        top: 7rem;
-        margin-top: 1rem;
-    }
-    .footer p{
-        font-size: 0.8rem;
+    .updates{
+        top: 33rem;
+        left: 148px;
+        font-size: 12px;
     }
 }

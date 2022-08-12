@@ -13,15 +13,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<!----- header ----->
+
 <div id="myContainer">
+
+<!----- header ----->
     <nav>
-        <a href="index.html"><img src="assets//driverlogo1.png"></a>
-        <ul>
-            <li><a href="">HOME</a></li>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">CONTACT US</a></li>
-        </ul>
+        <a href="index.html"><img src="assets//driverlogo2.png"></a>
     </nav>
 <div class="text-box">
     <h1><strong>Something <span style="color: #FD7F00;">ultra</span> is coming<br>Be the first to know</strong></h1>
@@ -45,24 +42,23 @@
                 <h3>Minutes</h3>
             </div>
             <div class="countdown-seconds">
-                <h3 class="second">Time</h3>
+                <h3 class="seconds">Time</h3>
                 <h3>Seconds</h3>
             </div>
         </div>
     </div>
 </section>
 
-
 <!------ Get Updates ------>
-        <div id="em-icon">
-            <i class="fa fa-envelope-o" style="color:#FD7F00;" aria-hidden="true"></i>
-        </div>
+<section>
+    <div class="updates">
         <h2>Get Updates</h2>
-            <div class="form-item">
-                <input type="email" placeholder="jane@example.com" name="email">
-                <button type="submit" id="myBtn">Sign up</button>
-            </div>
-
+    </div>
+    <div class="form-item" id="item">
+        <input type="email" placeholder="jane@example.com" name="email">
+        <button type="submit" id="myBtn">Sign up</button>
+    </div>
+</section>
 
 <!------ Footer ------>
 <section class="footer">
@@ -77,13 +73,14 @@
 
 </div>
 
-    <!------ Alert Modal------>
+<!------ Alert Modal------>
 <div id="myModal" class="Modal is-hidden is-visuallyHidden">
 
-    <!------ Modal content ------>
+<!------ Modal content ------>
     <div class="Modal-content">
         <div class="contain" id="confirm">
-            <div class="message"><strong><span style="color: #5e079b">Your email has been registered</span></strong><br><br>We will keep you notified</div><br> <span id="closeModal" class="Close"><button>Okay</button></span>
+            <div class="message"><strong><span style="color: #5e079b">Your email has been registered</span></strong><br><br><p>We will keep you notified</p></div><br><br> 
+            <span id="closeModal" class="Close"><button>Okay</button></span>
         </div>
     </div>
 </div>

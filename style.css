@@ -14,14 +14,12 @@ html{
     background-blend-mode: darken;
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
-    width: 100%;
-    position: relative;
 }
 
 /* navigation */
 nav{
     display: flex;
-    padding: 2% 6%;
+    padding: 2% 4%;
     justify-content: space-between;
     align-content: center;
     text-align: center;
@@ -42,7 +40,7 @@ h3{
     width: 68%;
     color: white;
     position: relative;
-    bottom: 5px;
+    top: 35px;
     left: 14%;
     text-align: left;
 }
@@ -51,16 +49,16 @@ h3{
     font-weight: 900;
 }
 .text-box p{
-    margin-top: 3rem;
-    font-size: 1.48rem;
+    margin-top: 2rem;
+    font-size: 1.47rem;
     color: white;
 }
 .countdown-timer{
-    top: 10px;
+    top: 40px;
     right: 18%;
     position: relative;
     padding: 10px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     display: flex;
     color: white;
     justify-content: center;
@@ -76,28 +74,28 @@ h3{
     width: 83px;
     height: 83px;
     margin: 1.3rem;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: white;
     background: rgba(64, 29, 88, 0.5);
     border: 1px solid white;
     border-radius: 50%;
-    padding: 20px;
+    padding: 25px;
 }
 .updates{
     color: white;
     position: relative;
-    right: 31.5%;
+    right: 32%;
     font-size: 0.7rem;
-    bottom: 1px;
+    top: 30px;
     text-align: center;
 }
 .form-item{
     display: flex;
     position: relative;
-    top: 25px;
+    top: 60px;
     justify-content: center;
     align-items: center;
-    right: 13.5%;
+    right: 14%;
 }
 input{
     border: none;
@@ -133,8 +131,8 @@ input{
     overflow: auto;
     transition: all 0.2s linear;
     opacity: 0.9;
-    position: relative;
-    bottom: 36rem;
+    position: fixed;
+    bottom: 26rem;
 }
 .Modal-content{
     background-color: #C0C0C0;
@@ -199,150 +197,33 @@ input{
     position: relative;
 }
 .footer p{
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 .icons{
-    position: absolute;
+    position: relative;
+    display: flex;
     padding: 0rem 4rem 0rem;
-    display: grid;
-    text-align: right;
-    bottom: 100px;
-    left: 86%;
+    align-items: center;
+    justify-content: center;
 }
 .icons a{
-    font-size: 1.6rem;
-    margin: 8px 10px 18px 12px;
+    font-size: 2rem;
+    margin: 8px 10px 18px 10px;
     text-decoration: none;
     color: white;
 }
 
-@media only screen and (min-width: 1440px){
-    .text-box{
-        top: 20px;
-    }
-    .text-box h1{
-        font-size: 3.5rem;
-    }
-    .text-box p{
-        margin-top: 3rem;
-        font-size: 1.7rem;
+@media (max-width: 1024px){
+    .countdown-timer{
+        right: 13%;
     }
     .updates{
-        font-size: 1rem;
-        top: 50px;
         right: 30%;
     }
-    .countdown-timer{
-        right: 18%;
-        top: 45px;
-        font-size: 1.2rem;
-    }
-    .day,.hour,.minute,.seconds{
-        width: 100px;
-        height: 100px;
-        font-size: 2.5rem;
-    }
-    .Modal{
-        bottom: 45rem;
-    }
-    .Modal-content{
-        height: 355px;
-    }
-    .form-item{
-        top: 75px;
-    }
-    input{
-        font-size: 1.2rem;
-    }
-    .footer{
-        bottom: 2rem;
-        margin-top: 12rem;
-    }
-    .footer p{
-        font-size: 1rem;
-    }
-    .icons{
-        bottom: 120px;
-    }
 }
 
-@media only screen and (max-width: 1024px) {
-    nav{
-        padding: 2% 4%;
-    }
-    .text-box{
-        top: 30px;
-        left: 14%;
-    }
-    .text-box h1{
-        font-size: 2.5rem;
-        font-weight: 900;
-    }
-    .text-box p{
-        margin-top: 3rem;
-        font-size: 1.22rem;
-        color: white;
-    }
-    .countdown-timer{
-        top: 40px;
-        right: 18%;
-        padding: 10px;
-        font-size: 0.8rem;
-    }
-    .day,.hour,.minute,.seconds{
-        width: 75px;
-        height: 75px;
-        margin: 0.8rem;
-        padding: 25px;
-        font-size: 1.3rem;
-    }
-    .updates{
-        color: white;
-        top: 25px;
-        right: 31.5%;
-        font-size: 0.6rem;
-    }
-    .Modal{
-        bottom: 34rem;
-    }
-    .Modal-content{
-        padding: 70px;
-        width: 60%;
-        left: 21%;
-        height: 330px;
-    }
-    #confirm .message{
-        font-size: 1.5rem;
-    }
-    #confirm button{
-        width: 35%;
-    }
-    .form-item{
-        right: 14%;    
-        top: 30px;
-    }
-    .footer{
-        text-align: center;
-        color: white;
-        opacity: 0.5;
-    }
-    .footer{
-        bottom: 2rem;
-    }
-    .footer p{
-        font-size: 0.7rem;
-    }
-    .icons{
-        padding: 0rem 3rem 1rem;
-        bottom: 75px;
-    }
-    .icons a{
-        margin: 0px 0px 18px 12px;
-    }
-}
-
-/* tablet devices */
-@media only screen and (max-width: 768px){
+/* tablet view */
+@media (max-width: 768px){
     .text-box{
         left: 10%;
     }
@@ -354,7 +235,7 @@ input{
         font-size: 1rem;
     }
     .countdown-timer{
-        top: 30px;
+        top: 50px;
         right: 23%;
         font-size: 0.6rem;
     }
@@ -368,17 +249,17 @@ input{
     .updates{
         right: 33%;
         font-size: 0.7rem;
-        top: 10px;
+        top: 35px;
     }
     input{
         width: 35%;
     }
     .form-item{
-        top: 25px;
+        top: 60px;
         right: 15%;
     }
     .Modal{
-        bottom: 27rem;
+        bottom: 26rem;
     }
     .Modal-content{
         height: 275px;
@@ -401,31 +282,58 @@ input{
         font-size: 1rem;
         border-radius: 15px;
     }
-    .footer{
-        top: 6rem;
-        margin-top: 0rem;
-    }
-    .icons{
-        display: flex;
-        bottom: 0px;
-        left: 30%;
-    }
     .icons a{
-        margin: 0px 10px 20px 20px;
+        font-size: 1.5rem;
     }
     .footer p{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
-/* phone devices */
-@media only screen and (max-width: 475px){
+@media (orientation: portrait) and (max-width: 600px){
+    .text-box h1{
+        font-size: 1.5rem;
+    }
+    .text-box p{
+        font-size: 0.8rem;
+    }
+    .countdown-timer{
+        right: 13%;
+    }
+    .updates{
+        right: 29%;
+    }
+    .form-item{
+        right: 11%;
+    }
+    input{
+        padding: 0px 0px 5px 0px;
+        font-size: 0.8rem;
+    }
+    #item button{
+        width: 23%;
+        padding: 11px;
+        border-radius: 15px;
+    }
+    .Modal{
+        bottom: 28rem;
+    }
+    .Modal-content{
+        height: 290px;
+        width: 70%;
+        padding: 45px;
+        left: 15%;
+    }
+}
+
+/* mobile view */
+@media (max-width: 475px){
     nav img{
         width: 100px;
     }
     .text-box{
-        left: 7%;
-        top: 0px;
+        left: 5%;
+        top: 35px;
     }
     .text-box h1{
         font-size: 1.3rem;
@@ -433,25 +341,27 @@ input{
     }
     .text-box p{
         margin-top: 1rem;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     .updates{
-        right: 29%;
-        font-size: 0.8rem;
+        right: 33%;
+        top: 10px;
+        font-size: 0.6rem;
     }
     .countdown-timer{
-        right: 10%;
-        top: 0px;
+        right: 15%;
+        top: 40px;
         padding: 10px;
     }
     .day,.hour,.minute,.seconds{
         width: 50px;
         height: 50px;
+        margin: 0.6rem;
         font-size: 0.9rem;
         padding: 15px;
     }
     h3{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     input{
         width: 50%;
@@ -464,27 +374,29 @@ input{
         top: 70px;
     }
     .form-item{
-        top: 0px;
-        right: 2%;
+        top: 15px;
+        right: 4%;
     }
     .Modal{
-        bottom: 27rem;
+        bottom: 24rem;
     }
     .Modal-content{
-        height: 220px;
+        height: 245px;
         left: 10%;
         width: 79%;
         padding: 25px;
     }
     #confirm button{
-        left: 12px;
+        left: 0px;
         padding: 15px;
         border-radius: 15px;
+        margin-top: unset;
         width: 50%;
+        bottom: 5px;
         top: 0px;
     }
     .footer{
-        bottom: 0rem;
+        bottom: 1rem;
         margin-bottom: 0rem;
     }
     .icons a{
@@ -496,93 +408,80 @@ input{
     }
 }
 
-
-@media only screen and (max-width: 375px) {
+@media (orientation: landscape) and (max-width: 550px){
     .text-box h1{
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
     .text-box p{
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
     .countdown-timer{
-        top: -10px;
+        right: 16%;
     }
-    .day,.hour,.minute,.seconds{
-        width: 50px;
-        height: 50px;
-        font-size: 0.9rem;
-        padding: 13px;
-        margin: 8px;
-    }
-    h2{
-        right: 23%;
-        top: -15px;
-    }
-    input{
-        font-size: 0.8rem;
-        bottom: 10px;
+    .updates{
+        font-size: 0.6rem;
+        right: 31%;
     }
     .form-item{
-        top: 0px;
+        right: 11%;
+    }
+    input{
+        padding: 0px 0px 5px 0px;
+        font-size: 0.8rem;
     }
     #item button{
-        left: -190px;
-        top: 75px;
+        width: 23%;
+        border-radius: 16px;
     }
     .Modal{
-        bottom: 29rem;
+        bottom: 20rem;
+    }
+    .Modal-content{
+        height: 250px;
+        width: 70%;
+        left: 15%;
+        padding: 38px;
     }
     #confirm button{
-        top: -10px;
-        margin-right: 26px;
-    }
-    #confirm .message{
-        font-size: 1.1rem;
-    }
-    .footer{
-        margin-bottom: 9rem;
-        top: 7rem;
-    }
-    .footer p{
-        font-size: 0.8rem;
+        margin-top: unset;
     }
 }
 
-
-/* smaller phone devices */
-@media only screen and (max-width: 320px) {
+@media (max-width: 320px){
     nav{
         padding:6% 6% ;
     }
     nav img{
-        width: 90px;
+        width: 80px;
     }
     .text-box{
-        top: 5px;
+        top: 30px;
+        left: 6%;
     }
     .text-box h1 {
         font-size: 1rem;
     }
     .text-box p{
-        font-size: 10.3px;
+        font-size: 8px;
     }
     h3{
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
     .countdown-timer{
-        top: 10px;
-        right: 7%;
+        top: 35px;
+        right: 15%;
     }
     .day,.hour,.minute,.seconds{
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
         font-size: 0.7rem;
-        padding: 13px;
+        padding: 10px;
         margin: 8px;
     }
-    h2 {
-        top: 5px;
-        right: 20%;
+    .updates{
+        top: 10px;
+        right: 31%;
+        font-size: 8px;
     }
     .form-item{
         top: 20px;
@@ -599,12 +498,12 @@ input{
         font-size: 0.8rem;
     }
     .Modal{
-        bottom: 30rem;
+        bottom: 24rem;
     }
     .Modal-content{
         width: 86%;
         left: 7%;
-        height: 180px;
+        height: 220px;
         padding: 20px;
     }
     #confirm .message{
@@ -615,11 +514,7 @@ input{
         font-size: 0.8rem;
         padding: 12px;
     }
-    .footer{
-        top: 7rem;
-        margin-top: 1rem;
-    }
     .footer p{
-        font-size: 0.8rem;
-    }
+        font-size: 0.7rem;
+    } 
 }

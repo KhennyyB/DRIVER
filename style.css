@@ -7,59 +7,150 @@
 html{
     font-size: 16px;
 }
-body{
-    width: 100%;
-    min-height: 120vh;
+#myContainer{
     background: rgba(9, 9, 10, 0.6) url(assets//backgroundimage.png);
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
     font-family: 'Montserrat', sans-serif;
-}
-#myContainer{
-
+    min-height: 100vh;
+    width: 100%;
     position: relative;
 }
 
 /* navigation */
 nav{
     display: flex;
-    padding: 40px 30px;
+    padding: 2% 6%;
     justify-content: space-between;
     align-content: center;
     text-align: center;
     align-items: center;
 }
 nav img{
-    width: 80px;
+    width: 100px;
 }
 p{
     opacity: 0.7;
 }
+h3{
+    margin-bottom: 3rem;
+}
 
-/* modal contents */ 
-.Modal{
+/* contents */ 
+.text-box{
+    width: 68%;
+    color: white;
+    position: relative;
+    bottom: 5px;
+    left: 14%;
+    text-align: left;
+}
+.text-box h1{
+    font-size: 3rem;
+    font-weight: 900;
+}
+.text-box p{
+    margin-top: 3rem;
+    font-size: 1.48rem;
+    color: white;
+}
+.countdown-timer{
+    top: 10px;
+    right: 18%;
+    position: relative;
+    padding: 10px;
+    font-size: 0.9rem;
     display: flex;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.countdown{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.day,.hour,.minute,.seconds{
+    width: 83px;
+    height: 83px;
+    margin: 1.3rem;
+    font-size: 1.8rem;
+    color: white;
+    background: rgba(64, 29, 88, 0.5);
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 20px;
+}
+.updates{
+    color: white;
+    position: relative;
+    right: 31.5%;
+    font-size: 0.7rem;
+    bottom: 1px;
+    text-align: center;
+}
+.form-item{
+    display: flex;
+    position: relative;
+    top: 25px;
+    justify-content: center;
+    align-items: center;
+    right: 13.5%;
+}
+input{
+    border: none;
+    padding: 0px 0px 12px 0px;
+    width: 32%;
+    font-size: 1rem;
+    border-bottom: 2px solid #FD7F00;
+    border-radius: none;
+    outline: none;
+    background: none;
+    color: white;
+}
+#item button{
+    background-color: #fd7f00;
+    width: 12%;
+    padding: 18px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 3%;
+    bottom: 10px;
+    transition: all 1s;
+}
+#item button:hover{
+    opacity: 0.5;
+}
+.Modal{
     -webkit-transition: 1s;
     overflow: auto;
     transition: all 0.2s linear;
     opacity: 0.9;
-    position: fixed;
-    bottom: 350px;
+    position: relative;
+    bottom: 36rem;
 }
 .Modal-content{
     background-color: #C0C0C0;
-    color: black;
+    color: #000000;
     border: 0.5px solid #aaa;
-    width: 80%;
-    padding: 25px;
-    height: 260px;
-    overflow: auto;
-    border-radius: 30px;
+    position: fixed;
+    padding: 50px;
+    width: 55%;
+    height: 355px;
+    left: 22%;
+    overflow: hidden;
+    border-radius: 45px;
+    box-sizing: border-box;
     text-align: center;
     justify-content: center;
-    position: fixed;
-    left: 45px;
+    margin-bottom: 2rem;
 }
 .ModalOpen{
     overflow: auto;
@@ -70,19 +161,15 @@ p{
 .is-visuallyhidden{
     opacity: 0;
 }
-.is-blurred{
-    filter: blur(6px);
-    -webkit-filter: blur(6px);
-}
 #confirm button{
     background-color: #5E079B;
-    border-radius: 15px;
+    border-radius: 20px;
     color: white;
-    padding: 15px;
+    padding: 19px;
+    margin-top: 20px;
     text-align: center;
-    width: 50%;
-    margin-left: 4px;
-    font-size: 16px;
+    width: 31%;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: all 1s;
 }
@@ -90,219 +177,449 @@ p{
     text-align: center;
 }
 .message{
-    font-size: 24px;
+    font-size: 1.8rem;
 }
-#confirm .message p{
-    font-size: 20px;
+.is-blurred{
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
 }
 #confirm button:hover{
     opacity: 0.5;
 }
-
-/* contents */
-.text-box{
-    width: 80%;
-    color: white;
-    position: absolute;
-    text-align: left;
-    left: 30px;
-    top: 110px;
-}
-.text-box h1{
-    font-size: 27px;
-    font-weight: 900;
-}
-.text-box p{
-    margin-top: 16px;
-    font-size: 13px;
-}
-.countdown-timer{
-    display: flex;
-    position: absolute;
-    padding: 10px;
-    color: white;
-    justify-content: center;
+.footer{
     text-align: center;
-    align-items: center;
-    top: 260px;
-    left: 5px;
-}
-.countdown{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-.day,.hour,.minute,.seconds{
-    width: 60px;
-    height: 60px;
-    margin: 15px;
-    font-size: 18px;
-    padding: 18px;
     color: white;
-    background: rgba(64, 29, 88, 0.5);
-    border: 1px solid white;
-    border-radius: 50%;
-}
-h3{
-    font-size: 14px;
-}
-.updates{
-    color: white;
-    display: flex;
-    position: absolute;
-    text-align: center;
-    top: 26rem;
-    left: 32px;
-    font-size: 10px;
-}
-.form-item{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: 29rem;
-    left: 32px;
-}
-input{
-    border: none;
-    padding: 0px 0px 4px 0px;
-    width: 250px;
-    font-size: 16px;
-    border-bottom: 2px solid #fd7f00;
-    border-radius: none;
-    outline: none;
-    background: none;
-    color: white;
-}
-#item button{
-    background-color: #fd7f00;
-    width: 150px;
-    padding: 13px;
-    border-radius: 15px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: 70px;
-    right: 102px;
-    transition: all 1s;
-}
-#item button:hover{
     opacity: 0.5;
 }
+.footer{
+    margin-top: 9rem;
+    font-weight: lighter;
+    color: white;
+    bottom: 2rem;
+    position: relative;
+}
+.footer p{
+    font-size: 0.8rem;
+}
+.icons{
+    position: absolute;
+    padding: 0rem 4rem 0rem;
+    display: grid;
+    text-align: right;
+    bottom: 100px;
+    left: 86%;
+}
+.icons a{
+    font-size: 1.6rem;
+    margin: 8px 10px 18px 12px;
+    text-decoration: none;
+    color: white;
+}
 
-
-/* tablet view */
-@media only screen and (min-width: 768px) {
-    nav{
-        padding: 35px 45px;
-    }
-    nav img{
-        width: 90px;
-    }
-    .Modal{
-        bottom: 380px;
-    }
-    .Modal-content{
-        padding: 45px;
-        width: 60%;
-        height: 275px;
-        left: 148px;
-        border-radius: 30px;
-    }
-    .message{
-        font-size: 22px;
-    }
-    #confirm .message p{
-        font-size: 18px;
-    }
-    #confirm button{
-        width: 30%;
-        font-size: 16px;
-    }
+@media only screen and (min-width: 1440px){
     .text-box{
-        left: 48px;
+        top: 20px;
     }
     .text-box h1{
-        font-size: 35px;
+        font-size: 3.5rem;
     }
     .text-box p{
-        font-size: 16px;
-    }
-    .countdown-timer{
-        top: 290px;
-        left: 20px;
-    }
-    .day,.hour,.minute,.seconds{
-        width: 70px;
-        height: 70px;
-        font-size: 24px;
-    }
-    h3{
-        font-size: 16px;
+        margin-top: 3rem;
+        font-size: 1.7rem;
     }
     .updates{
-        top: 28.5rem;
-        left: 48px;
-        font-size: 12px;
+        font-size: 1rem;
+        top: 50px;
+        right: 30%;
+    }
+    .countdown-timer{
+        right: 18%;
+        top: 45px;
+        font-size: 1.2rem;
+    }
+    .day,.hour,.minute,.seconds{
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+    }
+    .Modal{
+        bottom: 45rem;
+    }
+    .Modal-content{
+        height: 355px;
+    }
+    .form-item{
+        top: 75px;
+    }
+    input{
+        font-size: 1.2rem;
+    }
+    .footer{
+        bottom: 2rem;
+        margin-top: 12rem;
+    }
+    .footer p{
+        font-size: 1rem;
+    }
+    .icons{
+        bottom: 120px;
     }
 }
 
-
-/*desktop view*/
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     nav{
-        padding: 35px 45px;
-    }
-    nav img{
-        width: 100px;
-    }
-    .Modal{
-        bottom: 410px;
-    }
-    .Modal-content{
-        padding: 62px;
-        width: 56%;
-        height: 345px;
-        left: 265px;
-        border-radius: 60px;
-    }
-    .message{
-        font-size: 30px;
-    }
-    #confirm .message p{
-        font-size: 24px;
-    }
-    #confirm button{
-        width: 25%;
-        margin-top: 20px;
-        font-size: 17px;
+        padding: 2% 4%;
     }
     .text-box{
-        left: 150px;
+        top: 30px;
+        left: 14%;
     }
     .text-box h1{
-        font-size: 48px;
+        font-size: 2.5rem;
+        font-weight: 900;
     }
     .text-box p{
-        font-size: 23px;
+        margin-top: 3rem;
+        font-size: 1.22rem;
+        color: white;
     }
     .countdown-timer{
-        top: 350px;
-        left: 120px;
+        top: 40px;
+        right: 18%;
+        padding: 10px;
+        font-size: 0.8rem;
     }
     .day,.hour,.minute,.seconds{
         width: 75px;
         height: 75px;
-        margin: 20px;
-        font-size: 24px;
-        padding: 20px;
+        margin: 0.8rem;
+        padding: 25px;
+        font-size: 1.3rem;
     }
     .updates{
-        top: 33rem;
-        left: 148px;
-        font-size: 12px;
+        color: white;
+        top: 25px;
+        right: 31.5%;
+        font-size: 0.6rem;
+    }
+    .Modal{
+        bottom: 34rem;
+    }
+    .Modal-content{
+        padding: 70px;
+        width: 60%;
+        left: 21%;
+        height: 330px;
+    }
+    #confirm .message{
+        font-size: 1.5rem;
+    }
+    #confirm button{
+        width: 35%;
+    }
+    .form-item{
+        right: 14%;    
+        top: 30px;
+    }
+    .footer{
+        text-align: center;
+        color: white;
+        opacity: 0.5;
+    }
+    .footer{
+        bottom: 2rem;
+    }
+    .footer p{
+        font-size: 0.7rem;
+    }
+    .icons{
+        padding: 0rem 3rem 1rem;
+        bottom: 75px;
+    }
+    .icons a{
+        margin: 0px 0px 18px 12px;
+    }
+}
+
+/* tablet devices */
+@media only screen and (max-width: 768px){
+    .text-box{
+        left: 10%;
+    }
+    .text-box h1{
+        font-size: 2rem;
+    }
+    .text-box p{
+        margin-top: 1.2rem;
+        font-size: 1rem;
+    }
+    .countdown-timer{
+        top: 30px;
+        right: 23%;
+        font-size: 0.6rem;
+    }
+    .day,.hour,.minute,.seconds{
+        width: 45px;
+        height: 45px;
+        margin: 0.8rem;
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+    .updates{
+        right: 33%;
+        font-size: 0.7rem;
+        top: 10px;
+    }
+    input{
+        width: 35%;
+    }
+    .form-item{
+        top: 25px;
+        right: 15%;
+    }
+    .Modal{
+        bottom: 27rem;
+    }
+    .Modal-content{
+        height: 275px;
+        width: 55%;
+        left: 20%;
+        padding: 45px;
+    }
+    #confirm .message{
+        font-size: 1.2rem;
+    }
+    #item button{
+        width: 15%;
+        padding: 15px;
+        left: 3%;
+        bottom: 6px;
+    }
+    #confirm button{
+        padding: 15px;
+        width: 35%;
+        font-size: 1rem;
+        border-radius: 15px;
+    }
+    .footer{
+        top: 6rem;
+        margin-top: 0rem;
+    }
+    .icons{
+        display: flex;
+        bottom: 0px;
+        left: 30%;
+    }
+    .icons a{
+        margin: 0px 10px 20px 20px;
+    }
+    .footer p{
+        font-size: 1rem;
+    }
+}
+
+/* phone devices */
+@media only screen and (max-width: 475px){
+    nav img{
+        width: 100px;
+    }
+    .text-box{
+        left: 7%;
+        top: 0px;
+    }
+    .text-box h1{
+        font-size: 1.3rem;
+        font-weight: 900;
+    }
+    .text-box p{
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+    .updates{
+        right: 29%;
+        font-size: 0.8rem;
+    }
+    .countdown-timer{
+        right: 10%;
+        top: 0px;
+        padding: 10px;
+    }
+    .day,.hour,.minute,.seconds{
+        width: 50px;
+        height: 50px;
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    input{
+        width: 50%;
+        right: 5%;
+    }
+    #item button{
+        width: 30%;
+        padding: 13px;
+        left: -213px;
+        top: 70px;
+    }
+    .form-item{
+        top: 0px;
+        right: 2%;
+    }
+    .Modal{
+        bottom: 27rem;
+    }
+    .Modal-content{
+        height: 220px;
+        left: 10%;
+        width: 79%;
+        padding: 25px;
+    }
+    #confirm button{
+        left: 12px;
+        padding: 15px;
+        border-radius: 15px;
+        width: 50%;
+        top: 0px;
+    }
+    .footer{
+        bottom: 0rem;
+        margin-bottom: 0rem;
+    }
+    .icons a{
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+    .footer p{
+        font-size: 0.8rem;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    .text-box h1{
+        font-size: 1.1rem;
+    }
+    .text-box p{
+        font-size: 0.75rem;
+    }
+    .countdown-timer{
+        top: -10px;
+    }
+    .day,.hour,.minute,.seconds{
+        width: 50px;
+        height: 50px;
+        font-size: 0.9rem;
+        padding: 13px;
+        margin: 8px;
+    }
+    h2{
+        right: 23%;
+        top: -15px;
+    }
+    input{
+        font-size: 0.8rem;
+        bottom: 10px;
+    }
+    .form-item{
+        top: 0px;
+    }
+    #item button{
+        left: -190px;
+        top: 75px;
+    }
+    .Modal{
+        bottom: 29rem;
+    }
+    #confirm button{
+        top: -10px;
+        margin-right: 26px;
+    }
+    #confirm .message{
+        font-size: 1.1rem;
+    }
+    .footer{
+        margin-bottom: 9rem;
+        top: 7rem;
+    }
+    .footer p{
+        font-size: 0.8rem;
+    }
+}
+
+
+/* smaller phone devices */
+@media only screen and (max-width: 320px) {
+    nav{
+        padding:6% 6% ;
+    }
+    nav img{
+        width: 90px;
+    }
+    .text-box{
+        top: 5px;
+    }
+    .text-box h1 {
+        font-size: 1rem;
+    }
+    .text-box p{
+        font-size: 10.3px;
+    }
+    h3{
+        font-size: 0.7rem;
+    }
+    .countdown-timer{
+        top: 10px;
+        right: 7%;
+    }
+    .day,.hour,.minute,.seconds{
+        width: 45px;
+        height: 45px;
+        font-size: 0.7rem;
+        padding: 13px;
+        margin: 8px;
+    }
+    h2 {
+        top: 5px;
+        right: 20%;
+    }
+    .form-item{
+        top: 20px;
+        right: 0%;
+    }
+    input{
+        width: 55%;
+        font-size: 0.8rem;
+    }
+    #item button{
+        left: -178px;
+        border-radius: 14px;
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+    .Modal{
+        bottom: 30rem;
+    }
+    .Modal-content{
+        width: 86%;
+        left: 7%;
+        height: 180px;
+        padding: 20px;
+    }
+    #confirm .message{
+        font-size: 1.1rem;
+    }
+    #confirm button{
+        top: -20px;
+        font-size: 0.8rem;
+        padding: 12px;
+    }
+    .footer{
+        top: 7rem;
+        margin-top: 1rem;
+    }
+    .footer p{
+        font-size: 0.8rem;
     }
 }

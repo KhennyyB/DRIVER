@@ -336,7 +336,7 @@ input{
         top: 35px;
     }
     .text-box h1{
-        font-size: 3.3rem;
+        font-size: 1.3rem;
         font-weight: 900;
     }
     .text-box p{
@@ -344,12 +344,12 @@ input{
         font-size: 0.7rem;
     }
     .updates{
-        right: 33%;
+        right: 31%;
         top: 10px;
         font-size: 0.6rem;
     }
     .countdown-timer{
-        right: 15%;
+        right: 13%;
         top: 40px;
         padding: 10px;
     }
@@ -370,7 +370,7 @@ input{
     #item button{
         width: 30%;
         padding: 13px;
-        left: -213px;
+        left: -200px;
         top: 70px;
     }
     .form-item{

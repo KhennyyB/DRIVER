@@ -344,7 +344,7 @@ input{
         font-size: 0.7rem;
     }
     .updates{
-        right: 31%;
+        right: 35%;
         top: 10px;
         font-size: 0.6rem;
     }
@@ -370,7 +370,7 @@ input{
     #item button{
         width: 30%;
         padding: 13px;
-        left: -200px;
+        left: -233px;
         top: 70px;
     }
     .form-item{

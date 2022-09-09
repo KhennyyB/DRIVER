@@ -336,7 +336,7 @@ input{
         top: 35px;
     }
     .text-box h1{
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         font-weight: 900;
     }
     .text-box p{
@@ -344,7 +344,7 @@ input{
         font-size: 0.7rem;
     }
     .updates{
-        right: 35%;
+        right: 31%;
         top: 10px;
         font-size: 0.6rem;
     }
@@ -370,7 +370,7 @@ input{
     #item button{
         width: 30%;
         padding: 13px;
-        left: -233px;
+        left: -203px;
         top: 70px;
     }
     .form-item{

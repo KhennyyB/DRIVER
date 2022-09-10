@@ -334,7 +334,7 @@ input{
     .text-box{
         left: 5%;
         top: 35px;
-        width: 90%;
+        width: unset;
     }
     .text-box h1{
         font-size: 1.3rem;

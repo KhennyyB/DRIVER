@@ -293,13 +293,13 @@ input{
 
 @media (orientation: portrait) and (max-width: 600px){
     .text-box h1{
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .text-box p{
         font-size: 0.8rem;
     }
     .countdown-timer{
-        right: 9%;
+        right: 13%;
     }
     .updates{
         right: 29%;
@@ -334,7 +334,7 @@ input{
     }
     .text-box{
         left: 5%;
-        width: 100%;
+        width: 90%;
         top: 35px;
     }
     .text-box h1{

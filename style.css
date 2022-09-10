@@ -350,7 +350,7 @@ input{
         font-size: 0.6rem;
     }
     .countdown-timer{
-        right: 11%;
+        right: 10%;
         top: 40px;
         padding: 10px;
     }
@@ -371,7 +371,7 @@ input{
     #item button{
         width: 30%;
         padding: 13px;
-        left: -193px;
+        left: -183px;
         top: 70px;
     }
     .form-item{

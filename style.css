@@ -14,6 +14,7 @@ html{
     background-blend-mode: darken;
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
+    width: 100%;
 }
 
 /* navigation */
@@ -37,7 +38,7 @@ h3{
 
 /* contents */ 
 .text-box{
-    width: 100;
+    width: 68%;
     color: white;
     position: relative;
     top: 35px;
@@ -333,6 +334,7 @@ input{
     }
     .text-box{
         left: 5%;
+        width: 80%;
         top: 35px;
     }
     .text-box h1{

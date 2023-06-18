@@ -56,7 +56,7 @@ h3{
 }
 .countdown-timer{
     top: 40px;
-    right: 18%;
+    right: 13%;
     position: relative;
     padding: 10px;
     font-size: 0.8rem;
@@ -133,7 +133,7 @@ input{
     transition: all 0.2s linear;
     opacity: 0.9;
     position: fixed;
-    bottom: 20rem;
+    bottom: 32rem;
 }
 .Modal-content{
     background-color: #C0C0C0;
